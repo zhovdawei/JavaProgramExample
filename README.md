@@ -1,2 +1,2 @@
 # JavaProgramExample
-Java是最优秀的开发语言！
+Java是优秀的开发语言！
