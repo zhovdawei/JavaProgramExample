@@ -6,9 +6,8 @@ public class JoinTest {
 
         System.out.println("main 线程开始.....");
 
-
         Thread t1 = new Thread(new Runnable() {
-            @Override
+
             public void run() {
 
 
@@ -21,8 +20,10 @@ public class JoinTest {
                 System.out.println("子线程1结束.....");
             }
         });
+
+
         Thread t2 = new Thread(new Runnable() {
-            @Override
+
             public void run() {
                 System.out.println("子线程2开始.....");
                 try {
@@ -39,7 +40,6 @@ public class JoinTest {
                 System.out.println("子线程2结束.....");
             }
         });
-
 
         t2.start();
         t1.start();
