@@ -12,13 +12,11 @@ public class TestHeapOutofMemory {
         private int[] ints = new int[100];
     }
 
-
     public static void main(String[] args) {
         List<HeapOOM> list =new ArrayList<>();
         while (true){
             list.add(new HeapOOM());
         }
     }
-
 }
 // -XX:+PrintGCDetails

@@ -20,13 +20,8 @@ public class BADLY_NAMED_CODE {
 
 }
 
-/**
- *
- * javac -encoding utf-8 com\zdw\unit10\NameCheck.java
- *
- * javac -encoding utf-8 com\zdw\unit10\NameCheckProcessor.java
- *
- * javac -processor com.zdw.unit10.NameCheckProcessor com/zdw/unit10/BADLY_NAMED_CODE.java
- *
- *
- * */
+
+// javac -encoding utf-8 com\\zdw\\unit10\\NameCheck.java
+// javac -encoding utf-8 com\\zdw\\unit10\\NameCheckProcessor.java
+// avac -processor com.zdw.unit10.NameCheckProcessor com/zdw/unit10/BADLY_NAMED_CODE.java
+

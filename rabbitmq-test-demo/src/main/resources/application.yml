@@ -1,0 +1,51 @@
+spring:
+  # redis连接参数
+  redis:
+    host: 192.168.163.201
+    port: 6379
+    password: admin321
+    database: 0
+    timeout: 2000ms
+    jedis:
+      pool:
+        max-active: 10
+        max-wait: 1000ms
+        max-idle: 5
+        min-idle: 5
+
+  rabbitmq:
+    host: 192.168.163.201
+    port: 5672
+    username: david
+    password: admin321
+    virtual-host: /dev
+
+    # 消费者配置
+    listener:
+      simple:
+        # 最多只允许一条未确认
+        prefetch: 1
+        # 开启手动应答
+        acknowledge-mode: manual
+        default-requeue-rejected: false
+#        # 重试参数
+#        retry:
+#          # 开启重试机制
+#          enabled: true
+#          # 最大重试次数
+#          max-attempts: 3
+#          # 重试间隔时间，单位毫秒
+#          initial-interval: 5000
+
+    # 生产者异步确认配置参数
+    template:
+      # 开启投递错误，消息强制返回给生产者端
+      mandatory: true
+    # 开启消息发布回调
+    publisher-returns: true
+    # 开启消息发布确认类型
+    publisher-confirm-type: simple
+
+
+server:
+  port: 9091

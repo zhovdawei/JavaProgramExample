@@ -9,7 +9,4 @@ public class AopUtil {
     public void afterRealMethod(){
         System.out.println("在被代理方法执行后处理...");
     }
-
-
-
 }
